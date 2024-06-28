@@ -31,5 +31,7 @@ password = 'REPLACE_WITH_YOUR_PASSWORD'
 
 # print('Connection successful')
 # print(station.ifconfig())
+
+tiny32_v3.header_print()
 print("Info: boot.py ... runing")
 tiny32_v3.Buzzer_beep(1)

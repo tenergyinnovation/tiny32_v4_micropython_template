@@ -1,6 +1,7 @@
 from machine import Pin
 from time import sleep
 
+version = 0.1
 SW1_PIN = 34
 SW2_PIN =  35
 RELAY_PIN =  25
@@ -61,15 +62,6 @@ class tiny32_v3:
         global LedBlue_Value 
         global LedBuildin_Value 
         global Buzzer_Value
-
-        # Relay_Value = Pin(RELAY_PIN, Pin.OUT)
-        # LedRed_Value = Pin(LED_IO12_PIN, Pin.OUT)
-        # LedBlue_Value = Pin(LED_IO4_PIN, Pin.OUT)
-        # LedBuildin_Value = Pin(LED_BUILDIN, Pin.OUT)
-        # Buzzer_Value = Pin(BUZZER_PIN, Pin.OUT)
-        # Sw1_Value = Pin(SW1_PIN, Pin.IN)
-        # Sw2_Value = Pin(SW2_PIN, Pin.IN)
-        # SlidSw_Value = Pin(SLID_SW_PIN, Pin.IN)
         self
     
     def Relay(value):
@@ -130,6 +122,20 @@ class tiny32_v3:
         SlidSw_Value = Pin(SLID_SW_PIN,Pin.IN)
         state = SlidSw_Value.value()
         return not state     
+    
+    def header_print():
+            print("***********************************************************************")
+            print("* Project      :     tiny32_v4_micropython_template")
+            print("* Description  :     Template for run tiny32_v4 with Micropython platform")
+            print("* Hardware     :     tiny32_v4")
+            print("* Author       :     Tenergy Innovation Co., Ltd.")
+            print("* Date         :     19/06/2023")
+            print(f"* Revision     :     {version}")
+            print("* website      :     http://www.tenergyinnovation.co.th")
+            print("* Email        :     admin@innovation.co.th")
+            print("* TEL          :     +66 82-308-3299")
+            print("***********************************************************************/")
+
                
                
 
